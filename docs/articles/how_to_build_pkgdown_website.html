@@ -61,7 +61,14 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+  <a href="https://github.com/jennyjyounglee/TemplatePKGWebsite/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
 <!--/.nav-collapse -->
   </div>
@@ -78,7 +85,7 @@
 pkgdown</h1>
             
       
-      
+      <small class="dont-index">Source: <a href="https://github.com/jennyjyounglee/TemplatePKGWebsite/blob/HEAD/vignettes/how_to_build_pkgdown_website.Rmd" class="external-link"><code>vignettes/how_to_build_pkgdown_website.Rmd</code></a></small>
       <div class="hidden name"><code>how_to_build_pkgdown_website.Rmd</code></div>
 
     </div>
@@ -218,20 +225,58 @@ the documentation or vignettes, and then push to github.</p>
 <p>Commit the changes (the newly created <code>/docs</code> folder) and
 push them to the remote (on the master branch):</p>
 <pre class="console"><code>git add --all
-git commit -m "added pkgdown files"
+git commit -m "Customzie website and add vignettes"
 git push origin main</code></pre>
 <p>Then head over to the Settings on your GitHub repo and scroll to the
 GitHub Pages section and select master branch <code>/docs</code> folder
 in the dropdown menu:</p>
 <p><img src="images/how_to_build_pkgdown_website/publish.png">.</p>
-<p>Refresh the page a few times and if all worked out you should see the
-following:</p>
-<p>final image</p>
-<p>That’s it! To update your website, simply re-build locally using
-<code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> and then push to GitHub. GitHub Pages
-will then always use the files in the <code>/docs</code> folder for the
-source code of your website.</p>
+<p>Your website is on live now on this address:
+<code>https://username.github.io/TemplatePKGWebsite/</code>.</p>
 </div>
+<div class="section level2">
+<h2 id="step-6-update-your-website">Step 6: Update your website<a class="anchor" aria-label="anchor" href="#step-6-update-your-website"></a>
+</h2>
+<p>Simply re-build locally using <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> and
+then push to GitHub. GitHub Pages will then always use the files in the
+<code>/docs</code> folder for the source code of your website.</p>
+</div>
+<div class="section level2">
+<h2 id="step-7-let-roxygen2roxygenise-converts-roxygen-comments-to--rd-files">Step 7: Let <code>roxygen2::roxygenise()</code> converts roxygen
+comments to <code>.Rd</code> files<a class="anchor" aria-label="anchor" href="#step-7-let-roxygen2roxygenise-converts-roxygen-comments-to--rd-files"></a>
+</h2>
+<p>There are three steps in the transformation from <code>roxygen</code>
+comments in your source file to human readable documentation:</p>
+<ul>
+<li>You add <code>roxygen</code> comments to your source file.</li>
+<li>
+<code><a href="https://roxygen2.r-lib.org/reference/roxygenize.html" class="external-link">roxygen2::roxygenise()</a></code> converts roxygen comments to
+<code>.Rd</code> files.</li>
+<li>R converts <code>.Rd</code> files to human readable
+documentation.</li>
+</ul>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">roxygen2</span><span class="fu">::</span><span class="fu"><a href="https://roxygen2.r-lib.org/reference/roxygenize.html" class="external-link">roxygenise</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+</div>
+</div>
+<div class="section level1">
+<h1 id="references-1">References<a class="anchor" aria-label="anchor" href="#references-1"></a>
+</h1>
+<ul>
+<li>
+<a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown
+website</a>.</li>
+<li>
+<a href="https://bookdown.org/yihui/blogdown/" class="external-link">Xie, Y., Hill, A.P.
+and Thomas, A., 2017. Blogdown: creating websites with R markdown. CRC
+Press.</a>.</li>
+<li>
+<a href="https://bookdown.org/yihui/rmarkdown/" class="external-link">Xie, Yihui, Joseph
+J. Allaire, and Garrett Grolemund. R markdown: The definitive guide. CRC
+Press, 2018.</a>.</li>
+<li>
+<a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html" class="external-link">roxygen</a>.</li>
+</ul>
 </div>
   </div>
 

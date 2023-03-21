@@ -131,7 +131,7 @@ Next we need to publish the website online, easy way using the `/docs` folder. N
 Commit the changes (the newly created `/docs` folder) and push them to the remote (on the master branch):
 ```console
 git add --all
-git commit -m "added pkgdown files"
+git commit -m "Customzie website and add vignettes"
 git push origin main
 ```
 
@@ -139,9 +139,27 @@ Then head over to the Settings on your GitHub repo and scroll to the GitHub Page
 
 ![](./images/how_to_build_pkgdown_website/publish.png).
 
-Refresh the page a few times and if all worked out you should see the following:
+Your website is on live now on this address: `https://username.github.io/TemplatePKGWebsite/`.
 
-final image
+## Step 6: Update your website
 
-That’s it! To update your website, simply re-build locally using `pkgdown::build_site()` and then push to GitHub. GitHub Pages will then always use the files in the `/docs` folder for the source code of your website.
+Simply re-build locally using `pkgdown::build_site()` and then push to GitHub. GitHub Pages will then always use the files in the `/docs` folder for the source code of your website.
 
+## Step 7: Let `roxygen2::roxygenise()` converts roxygen comments to `.Rd` files
+
+There are three steps in the transformation from `roxygen` comments in your source file to human readable documentation:
+
+* You add `roxygen` comments to your source file.
+* `roxygen2::roxygenise()` converts roxygen comments to `.Rd` files.
+* R converts `.Rd` files to human readable documentation.
+
+```{r, eval=F}
+roxygen2::roxygenise()
+```
+
+# References
+
+* [pkgdown website](https://pkgdown.r-lib.org/reference/build_site.html).
+* [Xie, Y., Hill, A.P. and Thomas, A., 2017. Blogdown: creating websites with R markdown. CRC Press.](https://bookdown.org/yihui/blogdown/).
+* [Xie, Yihui, Joseph J. Allaire, and Garrett Grolemund. R markdown: The definitive guide. CRC Press, 2018.](https://bookdown.org/yihui/rmarkdown/).
+* [roxygen](https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html).
