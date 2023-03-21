@@ -3,8 +3,6 @@
 .RData
 .Ruserdata
 inst/doc
-TemplatePKGWebsite.Rproj
-.Rproj*
 .Rdata
 .httr-oauth
 .DS_Store
