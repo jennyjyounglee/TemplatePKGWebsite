@@ -86,6 +86,9 @@ pkgdown::build_site()
 
 First, setup R package structure such ad `README.md`, `LICENSE.md`, `NEWS.md`, and vignette files.
 ```{r, eval=F}
+# Run once to configure package to use pkgdown
+usethis::use_pkgdown()
+
 # created README.md for Github landing page
 usethis::use_readme_md(open = FALSE)
 

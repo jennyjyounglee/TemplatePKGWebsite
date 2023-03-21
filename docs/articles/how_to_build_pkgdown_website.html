@@ -55,6 +55,9 @@
     <li>
       <a href="../articles/how_to_build_pkgdown_website.html">Creating a website for your R package: using pkgdown</a>
     </li>
+    <li>
+      <a href="../articles/my_vignette.html">This is my Vignette</a>
+    </li>
   </ul>
 </li>
 <li>
@@ -182,7 +185,10 @@ contains all the source files for your website.</p>
 <p>First, setup R package structure such ad <code>README.md</code>,
 <code>LICENSE.md</code>, <code>NEWS.md</code>, and vignette files.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># created README.md for Github landing page</span>
+<code class="sourceCode R"><span class="co"># Run once to configure package to use pkgdown</span>
+<span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_pkgdown.html" class="external-link">use_pkgdown</a></span><span class="op">(</span><span class="op">)</span>
+
+<span class="co"># created README.md for Github landing page</span>
 <span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_readme_rmd.html" class="external-link">use_readme_md</a></span><span class="op">(</span>open <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
 
 <span class="co"># creates LICENSE.md file</span>
