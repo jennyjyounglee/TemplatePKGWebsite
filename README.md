@@ -1,17 +1,17 @@
 
-# A website for R package `TemplatePKGWebsite`
+# A website for R package `templatepkgdown`
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of `TemplatePKGWebsite` is to ...
+The goal of `templatepkgdown` is to ...
 
 ## Installation
 
-You can install the released version of `TemplatePKGWebsite` from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of `templatepkgdown` from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("TemplatePKGWebsite")
+install.packages("templatepkgdown")
 ```
 
 ## Example
@@ -19,7 +19,7 @@ install.packages("TemplatePKGWebsite")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(TemplatePKGWebsite)
+library(templatepkgdown)
 ## basic example code
 ```
 

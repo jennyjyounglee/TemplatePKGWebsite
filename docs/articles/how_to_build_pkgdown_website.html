@@ -5,14 +5,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Creating a website for your R package: using pkgdown • TemplatePKGWebsite</title>
+<title>Creating a website for your R package: using pkgdown • templatepkgdown</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Creating a website for your R package: using pkgdown">
-<meta property="og:description" content="TemplatePKGWebsite">
+<meta property="og:description" content="templatepkgdown">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -32,7 +32,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">TemplatePKGWebsite</a>
+        <a class="navbar-link" href="../index.html">templatepkgdown</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.0</span>
       </span>
     </div>
@@ -66,7 +66,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/jennyjyounglee/TemplatePKGWebsite/" class="external-link">
+  <a href="https://github.com/jennyjyounglee/templatepkgdown/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -88,7 +88,7 @@
 pkgdown</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/jennyjyounglee/TemplatePKGWebsite/blob/HEAD/vignettes/how_to_build_pkgdown_website.Rmd" class="external-link"><code>vignettes/how_to_build_pkgdown_website.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/jennyjyounglee/templatepkgdown/blob/HEAD/vignettes/how_to_build_pkgdown_website.Rmd" class="external-link"><code>vignettes/how_to_build_pkgdown_website.Rmd</code></a></small>
       <div class="hidden name"><code>how_to_build_pkgdown_website.Rmd</code></div>
 
     </div>
@@ -139,11 +139,11 @@ tutorial doesn’t work for you.</p>
 <div class="section level2">
 <h2 id="step-1-create-an-r-package">Step 1: Create an R package<a class="anchor" aria-label="anchor" href="#step-1-create-an-r-package"></a>
 </h2>
-<pre><code>* In your local Rstudio, create a local R pacakge (a very simple one) with a package name whichever you want. I created a package called `TemplatePKGWebsite`. My package is located in `Documents/Github/TemplatePKGWebsite`. You can do this with two following ways:
+<pre><code>* In your local Rstudio, create a local R pacakge (a very simple one) with a package name whichever you want. I created a package called `templatepkgdown`. My package is located in `Documents/Github/template_pkgdown`. You can do this with two following ways:
   - Use R code to create R package</code></pre>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># setup R package structure</span>
-<span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_package.html" class="external-link">create_package</a></span><span class="op">(</span><span class="st">"TemplatePKGWebsite"</span><span class="op">)</span></code></pre></div>
+<span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_package.html" class="external-link">create_package</a></span><span class="op">(</span><span class="st">"templatepkgdown"</span><span class="op">)</span></code></pre></div>
 <pre><code>  - Go into Rstudio &gt; File &gt; New Project &gt; New Directory &gt; R package
     ![](./images/how_to_build_pkgdown_website/project_wizard.png).</code></pre>
 </div>
@@ -156,22 +156,22 @@ this which I explain in my tutorial. Here I will use the command line to
 accomplish this:</p>
 <ul>
 <li><p>Create a repository in Github. I named the repo as
-<code>TemplatePKGWebsite</code> <img src="images/how_to_build_pkgdown_website/new_repo.png"></p></li>
+<code>templatepkgdown</code> <img src="images/how_to_build_pkgdown_website/new_repo.png"></p></li>
 <li><p>Push the R package folder to my remote repository.</p></li>
 </ul>
-<pre class="console"><code>cd Documents/Github/TemplatePKGWebsite
+<pre class="console"><code>cd Documents/Github/templatepkgdown
 git status
 git add --all
 git commit -m "initial version of the R package"
 git branch -M main
-git remote add origin https://github.com/username/TemplatePKGWebsite.git
+git remote add origin https://github.com/username/templatepkgdown.git
 git push origin main</code></pre>
 </div>
 <div class="section level2">
 <h2 id="step-3-initialize-website-using-pkgdown">Step 3: Initialize website using pkgdown<a class="anchor" aria-label="anchor" href="#step-3-initialize-website-using-pkgdown"></a>
 </h2>
 <p>With the below line of code, it will automatically pop-up a website
-for the package <code>TemplatePKGWebsite</code>. This will create
+for the package <code>templatepkgdown</code>. This will create
 <code>/docs</code> folder in the root of your package directory which
 contains all the source files for your website.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
@@ -211,8 +211,18 @@ vignette: &gt;
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}</code></pre>
 <p>Then, create a <code>.gitignore</code> file in the root of the
-directory with the following two lines:</p>
-<pre class="console"><code>TemplatePKGWebsite.Rproj
+directory with the following lines. <em>Note</em> DO NOT add
+<code>docs</code> in the <code>.gitignore</code>, it would cause broken
+link in vignettes.</p>
+<pre class="console"><code>.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+inst/doc
+.Rdata
+.httr-oauth
+.DS_Store
+templatepkgdown.Rproj
 .Rproj*</code></pre>
 <p>Let’s check how the website looks like now. Note that now
 <code>article</code> and <code>changelog</code> tab has been added.</p>
@@ -238,7 +248,7 @@ GitHub Pages section and select master branch <code>/docs</code> folder
 in the dropdown menu:</p>
 <p><img src="images/how_to_build_pkgdown_website/publish.png">.</p>
 <p>Your website is on live now on this address:
-<code>https://username.github.io/TemplatePKGWebsite/</code>.</p>
+<code>https://username.github.io/templatepkgdown/</code>.</p>
 </div>
 <div class="section level2">
 <h2 id="step-6-update-your-website">Step 6: Update your website<a class="anchor" aria-label="anchor" href="#step-6-update-your-website"></a>
