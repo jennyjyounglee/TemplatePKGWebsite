@@ -45,14 +45,21 @@ install.packages(c("devtools","usethis","knitr","rmarkdown", "roxygen2", "pkgdow
 
 ## Step 1: Create an R package
 
-    * In your local Rstudio, create a local R pacakge (a very simple one) with a package name whichever you want. I created a package called `templatepkgdown`. My package is located in `Documents/Github/template_pkgdown`. You can do this with two following ways:
-      - Use R code to create R package
+  * In your local Rstudio, create a local R package (a very simple one) with a package name whichever you want. I created a package called `templatepkgdown`. My package is located in `Documents/Github/template_pkgdown`. You can do this with two following ways:
+    - Go into `Rstudio > File > New Project > New Directory > R package`.
+![](./images/how_to_build_pkgdown_website/project_wizard.png).
+    - Use R code to create R package
 ```{r,eval=F}
 # setup R package structure
 usethis::create_package("templatepkgdown")
 ```
-      - Go into Rstudio > File > New Project > New Directory > R package
-        ![](./images/how_to_build_pkgdown_website/project_wizard.png).
+
+
+    
+ 
+
+      
+
 
 ## Step 2: Initialize Git Repository
 

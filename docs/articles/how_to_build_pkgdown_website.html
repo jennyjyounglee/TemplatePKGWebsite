@@ -139,13 +139,23 @@ tutorial doesn’t work for you.</p>
 <div class="section level2">
 <h2 id="step-1-create-an-r-package">Step 1: Create an R package<a class="anchor" aria-label="anchor" href="#step-1-create-an-r-package"></a>
 </h2>
-<pre><code>* In your local Rstudio, create a local R pacakge (a very simple one) with a package name whichever you want. I created a package called `templatepkgdown`. My package is located in `Documents/Github/template_pkgdown`. You can do this with two following ways:
-  - Use R code to create R package</code></pre>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<ul>
+<li>In your local Rstudio, create a local R package (a very simple one)
+with a package name whichever you want. I created a package called
+<code>templatepkgdown</code>. My package is located in
+<code>Documents/Github/template_pkgdown</code>. You can do this with two
+following ways:
+<ul>
+<li>Go into
+<code>Rstudio &gt; File &gt; New Project &gt; New Directory &gt; R package</code>.
+<img src="images/how_to_build_pkgdown_website/project_wizard.png">.</li>
+<li>Use R code to create R package</li>
+</ul>
+</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># setup R package structure</span>
 <span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/create_package.html" class="external-link">create_package</a></span><span class="op">(</span><span class="st">"templatepkgdown"</span><span class="op">)</span></code></pre></div>
-<pre><code>  - Go into Rstudio &gt; File &gt; New Project &gt; New Directory &gt; R package
-    ![](./images/how_to_build_pkgdown_website/project_wizard.png).</code></pre>
 </div>
 <div class="section level2">
 <h2 id="step-2-initialize-git-repository">Step 2: Initialize Git Repository<a class="anchor" aria-label="anchor" href="#step-2-initialize-git-repository"></a>
@@ -174,7 +184,7 @@ git push origin main</code></pre>
 for the package <code>templatepkgdown</code>. This will create
 <code>/docs</code> folder in the root of your package directory which
 contains all the source files for your website.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Run to build the website</span>
 <span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="images/how_to_build_pkgdown_website/pkgdown_website1.png">.</p>
@@ -184,7 +194,7 @@ contains all the source files for your website.</p>
 </h2>
 <p>First, setup R package structure such ad <code>README.md</code>,
 <code>LICENSE.md</code>, <code>NEWS.md</code>, and vignette files.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Run once to configure package to use pkgdown</span>
 <span class="fu">usethis</span><span class="fu">::</span><span class="fu"><a href="https://usethis.r-lib.org/reference/use_pkgdown.html" class="external-link">use_pkgdown</a></span><span class="op">(</span><span class="op">)</span>
 
@@ -226,7 +236,7 @@ templatepkgdown.Rproj
 .Rproj*</code></pre>
 <p>Let’s check how the website looks like now. Note that now
 <code>article</code> and <code>changelog</code> tab has been added.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># This will automatically open up your web browser with the built website</span>
 <span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p><img src="images/how_to_build_pkgdown_website/pkgdown_website2.png"></p>
@@ -271,7 +281,7 @@ comments in your source file to human readable documentation:</p>
 <li>R converts <code>.Rd</code> files to human readable
 documentation.</li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">roxygen2</span><span class="fu">::</span><span class="fu"><a href="https://roxygen2.r-lib.org/reference/roxygenize.html" class="external-link">roxygenise</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
 </div>
